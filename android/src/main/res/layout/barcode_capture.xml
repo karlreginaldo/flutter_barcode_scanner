@@ -22,14 +22,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp">
 
-                <ImageView
+                <Button
                     android:id="@+id/btnBarcodeCaptureCancel"
-                    android:layout_width="70dp"
-                    android:layout_height="32dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    app:srcCompat="@drawable/ic_baseline_arrow_back_24"
-                    tools:layout_marginTop="8dp" />
+                    android:background="@android:color/transparent"
+                    android:text="Exit"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView3"
