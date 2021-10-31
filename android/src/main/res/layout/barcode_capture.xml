@@ -54,7 +54,6 @@
 
 
 
-        android:layout_height="688dp"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <RelativeLayout
