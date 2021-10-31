@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
 
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -22,22 +23,24 @@
                 android:layout_height="60dp">
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="67dp"
-                    android:layout_height="48dp"
+                    android:id="@+id/btnBarcodeCaptureCancel"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
-                    app:srcCompat="@drawable/main_icon" />
+                    app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                    tools:layout_marginTop="8dp" />
 
                 <TextView
                     android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_height="match_parent"
-                    android:paddingTop="12dp"
+                    android:paddingTop="14dp"
                     android:text="BARCODE SCANNER"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
             </TableRow>
 
         </TableLayout>
@@ -47,9 +50,11 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
+        android:layout_heig="match_parent"
 
 
-        android:layout_height="match_parent"
+
+        android:layout_height="688dp"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <RelativeLayout
@@ -58,79 +63,6 @@
             android:layout_height="match_parent"
             android:background="@android:color/black"
             android:keepScreenOn="true">
-
-            <com.amolg.flutterbarcodescanner.camera.CameraSourcePreview
-                android:id="@+id/preview"
-                android:layout_width="match_parent"
-                android:layout_height="687dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginRight="0dp">
-
-                <com.amolg.flutterbarcodescanner.camera.GraphicOverlay
-                    android:id="@+id/graphicOverlay"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#44000000" />
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-            </com.amolg.flutterbarcodescanner.camera.CameraSourcePreview>
-
-            <RelativeLayout
-                android:id="@+id/layoutBottom"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="598dp"
-                android:background="#ffFF0000">
-
-                <ImageView
-                    android:id="@+id/imgViewSwitchCamera"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginBottom="16dp"
-                    android:contentDescription="Switch camera"
-                    android:src="@drawable/ic_switch_camera" />
-
-                <ImageView
-                    android:id="@+id/imgViewBarcodeCaptureUseFlash"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_centerInParent="true"
-                    android:contentDescription="Flash button"
-                    android:src="@drawable/ic_barcode_flash_off" />
-
-                <Button
-                    android:id="@+id/btnBarcodeCaptureCancel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="9dp"
-                    android:layout_marginRight="9dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@android:color/transparent"
-                    android:text="Cancel"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white" />
-            </RelativeLayout>
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
@@ -145,6 +77,57 @@
         </RelativeLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <com.amolg.flutterbarcodescanner.camera.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="861dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_anchor="@+id/nestedScrollView"
+        app:layout_anchorGravity="center">
+
+        <com.amolg.flutterbarcodescanner.camera.GraphicOverlay
+            android:id="@+id/graphicOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="#44ff0000" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </com.amolg.flutterbarcodescanner.camera.CameraSourcePreview>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="0dp"
+        android:textAlignment="center"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="-100dp"
+        android:text="Make sure the Barcode is within the frame."
+         />
+
+    <ImageView
+        android:id="@+id/imgViewBarcodeCaptureUseFlash"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="Flash button"
+        android:src="@drawable/ic_barcode_flash_off"
+        app:layout_anchor="@+id/nestedScrollView"
+        app:layout_anchorGravity="bottom|center"
+        app:srcCompat="@drawable/ic_barcode_flash_off"
+        tools:srcCompat="@drawable/ic_barcode_flash_off" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
