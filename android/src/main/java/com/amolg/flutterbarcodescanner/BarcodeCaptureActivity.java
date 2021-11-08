@@ -224,6 +224,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         // to other detection examples to enable the barcode detector to detect small barcodes
         // at long distances.
         CameraSource.Builder builder = new CameraSource.Builder(getApplicationContext(), barcodeDetector)
+                .setFocusMode(Camera.Parameters.FOCUS_MODE_MACRO)
                 .setFacing(cameraFacing)
                 .setRequestedPreviewSize(1600, 1024)
                 .setRequestedFps(30.0f)
