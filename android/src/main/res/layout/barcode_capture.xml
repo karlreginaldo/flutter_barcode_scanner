@@ -89,7 +89,7 @@
     <com.amolg.flutterbarcodescanner.camera.CameraSourcePreview
         android:id="@+id/preview"
         android:layout_width="match_parent"
-        android:layout_height="861dp"
+        android:layout_height="61dp"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginEnd="0dp"
@@ -111,6 +111,19 @@
 
     </com.amolg.flutterbarcodescanner.camera.CameraSourcePreview>
 
+    <ImageView
+        android:id="@+id/imgViewBarcodeCaptureUseFlash"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="Flash button"
+        android:src="@drawable/ic_barcode_flash_off"
+        app:layout_anchor="@+id/nestedScrollView"
+        app:layout_anchorGravity="bottom|center"
+        app:srcCompat="@drawable/ic_barcode_flash_off"
+        tools:srcCompat="@drawable/ic_barcode_flash_off" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -124,19 +137,6 @@
         android:layout_marginBottom="-100dp"
         android:text="Make sure the Barcode is within the frame."
         android:textStyle="normal" />
-
-    <ImageView
-        android:id="@+id/imgViewBarcodeCaptureUseFlash"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="25dp"
-        android:contentDescription="Flash button"
-        android:src="@drawable/ic_barcode_flash_off"
-        app:layout_anchor="@+id/nestedScrollView"
-        app:layout_anchorGravity="bottom|center"
-        app:srcCompat="@drawable/ic_barcode_flash_off"
-        tools:srcCompat="@drawable/ic_barcode_flash_off" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
